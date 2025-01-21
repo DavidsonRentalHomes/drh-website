@@ -16,4 +16,10 @@ export class AppController {
   aboutPage() {
     return this.appService.getAboutPage();
   }
+
+  @Get('/homepage')
+  @Render('homepage')
+  gotoHomePage() {
+    return this.appService.getHomepage();
+  }
 }
