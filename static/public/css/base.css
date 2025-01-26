@@ -44,6 +44,38 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+}
+
+.sidebar {
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    line-height: 2.5rem;
+    padding-left: 3rem;
+}
+
+.content {
+    background-color: #fff;
+}
+
 .hero {
     background: #4CAF50;
     color: white;
@@ -76,18 +108,4 @@ nav ul li a:hover {
 
 .features ul li {
     margin-bottom: 0.5rem;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-footer p {
-    font-size: 1rem;
 }
