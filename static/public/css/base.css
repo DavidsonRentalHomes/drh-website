@@ -76,36 +76,3 @@ footer p {
     background-color: #fff;
 }
 
-.hero {
-    background: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 2rem;
-}
-
-.hero h2 {
-    font-size: 2rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-}
-
-.features {
-    background-color: #fff;
-    padding: 2rem;
-    text-align: center;
-}
-
-.features h2 {
-    margin-bottom: 1rem;
-}
-
-.features ul {
-    list-style-type: none;
-    font-size: 1.2rem;
-}
-
-.features ul li {
-    margin-bottom: 0.5rem;
-}
