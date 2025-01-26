@@ -11,6 +11,9 @@ export class AppService {
   }
 
   getAboutPage() {
-    return { title: 'About | Davidson Rental Homes' };
+    return {
+      title: 'About | Davidson Rental Homes',
+      body: 'AHOY MINOY NOY NOY!',
+    };
   }
 }
