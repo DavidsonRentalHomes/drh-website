@@ -1,16 +1,22 @@
 import { Controller, Get, Res } from '@nestjs/common';
 import { Response } from 'express';
-import { join } from 'path';
 import { AppService } from './app.service';
-import { PATH_TO_FRONTEND } from './constants';
 
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
+  @Get('/')
+  healthCheck(@Res() res: Response) {
+    res.json({
+      message:
+        'Server is running. Prefix all requests with `/api` to access server resources.',
+    });
+  }
+
   // Enable client-side routing
-  @Get('*')
+  @Get('/api/hello')
   serveAngularApp(@Res() res: Response) {
-    res.sendFile(join(PATH_TO_FRONTEND, 'index.html'));
+    res.json({ message: 'Hello from the server!' });
   }
 }
