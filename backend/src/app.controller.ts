@@ -1,19 +1,16 @@
-import { Controller, Get, Render } from '@nestjs/common';
+import { Controller, Get, Res } from '@nestjs/common';
+import { Response } from 'express';
+import { join } from 'path';
 import { AppService } from './app.service';
+import { PATH_TO_FRONTEND } from './constants';
 
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('/')
-  @Render('index')
-  root() {
-    return this.appService.getHomepage();
-  }
-
-  @Get('/about')
-  @Render('about')
-  aboutPage() {
-    return this.appService.getAboutPage();
+  // Enable client-side routing
+  @Get('*')
+  serveAngularApp(@Res() res: Response) {
+    res.sendFile(join(PATH_TO_FRONTEND, 'index.html'));
   }
 }
