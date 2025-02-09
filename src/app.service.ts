@@ -7,10 +7,12 @@ export class AppService {
   }
 
   getHomepage() {
-    return { message: 'Hello world! Step 2' };
+    return { title: 'Home | Davidson Rental Homes' };
   }
 
   getAboutPage() {
-    return { message: 'About Page' };
+    return {
+      title: 'About | Davidson Rental Homes',
+    };
   }
 }

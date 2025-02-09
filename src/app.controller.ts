@@ -5,7 +5,7 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
+  @Get('/')
   @Render('index')
   root() {
     return this.appService.getHomepage();
@@ -15,11 +15,5 @@ export class AppController {
   @Render('about')
   aboutPage() {
     return this.appService.getAboutPage();
-  }
-
-  @Get('/homepage')
-  @Render('homepage')
-  gotoHomePage() {
-    return this.appService.getHomepage();
   }
 }
